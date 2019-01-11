@@ -1,0 +1,487 @@
+/*Paramètres CSS du bouton scroll*/
+.scroll-top-wrapper {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  z-index: 99999999;
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  line-height: 25px;
+  right: 30px;
+  bottom: 30px;
+  padding-top: 10px;
+  border-radius: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.scroll-top-wrapper:hover {
+  background-color: white;
+}
+
+.scroll-top-wrapper.show {
+  visibility: visible;
+  cursor: pointer;
+  opacity: 1.0;
+}
+/*fin du scroll*/
+video#video{
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+}
+ul{
+  list-style: none;
+}
+.sidenav{
+  height: 100%;
+  width: 280px;
+  position: fixed;
+  z-index: 0;
+  top: -15px;
+  left: 0;
+  background-color: white;
+}
+.user-view{
+  background-color: #0073B4;
+  margin-left: 0;
+  margin-left: -40px;
+  text-align: center;
+}
+.flag{
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  margin-top: 10px;
+  margin-left: -130px;
+}
+.userjpg{
+  height: 120px;
+  width: 120px;
+  border-radius: 100px;
+  margin-bottom: 0;
+}
+.firstName{
+  color: black;
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.lastName{
+color: white;
+font-size: 40px;
+margin-top: 0;
+margin-bottom: 15px;
+}
+.formation{
+  color: white;
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.adress{
+  font-size: 20px;
+}
+.phone{
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: white;
+}
+.email{
+  font-size: 25px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+}
+.miniature{
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+.js-scrollTo_center-align_waves-effect_waves-blue{
+  font-size: 20px;
+  margin-top: 500px;
+}
+p{
+  text-align: center;
+}
+#about{
+  font-size: 20px;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  width: 500px;
+  float: right;
+  top: 350px;
+  tright: 20px;
+  position: relative;
+}
+#experience{
+  text-align: center;
+  position: absolute;
+  margin-top: 55%;
+  height: ;
+  width: 84.8%;
+  margin-left: 272px;
+}
+#skills{
+  position: absolute;
+  left: 280px;
+  top: 263%;
+  text-align: center;
+}
+
+/*timeline*/
+
+/*POUR QUE LES BOITES NE DÉPASSENT PAS SUR LA BARRE*/
+* {
+  box-sizing: border-box;
+}
+/* The actual timeline (the vertical ruler) TAILLE DE LA BARRE*/
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* The actual timeline (the vertical ruler) POUR QU'ON VOIE LA BARRE */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+/* Container around content BOITES DE CHAQUE COTÉ*/
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+/* The circles on the timeline PRÉSENCE DES POINTS*/
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+/* Place the container to the left PLACE LA BOITE A GAUCHE DE LA BARRE*/
+.left {
+  left: 0;
+}
+/* Place the container to the right PLACE LA BOITE A DROITE DE LA BARRE*/
+.right {
+  left: 50%;
+}
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+/* Fix the circle for containers on the right side PLACE LE POINT A GAUCHE POUR LES BOITES A DROITE */
+.right::after {
+  left: -16px;
+}
+/* The actual content  CRÉE LA BOITE*/
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+/* Media queries - Responsive timeline on screens less than 600px wide ADAPTE LA TIMELINE POUR LES PETITS ÉCRANS*/
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+/*PROGRESS BAR RONDE DES COMPÉTENCES*/
+.progress{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 90px;
+}
+
+
+.progress-circle{
+  position: relative;             /* pour servir de référent */
+  box-sizing: border-box;         /* prise en compte bordure dans la dimension */
+  font-size: 6em;                 /* pour définir les dimensions */
+  width: 1em;                     /* fixe la largeur */
+  height: 1em;                    /* fixe la hauteur */
+  border-radius: 50%;             /* rendu aspect circulaire */
+  border: .15em solid #CDE;       /* couleur de fond de l'anneau */
+  background-color: #;         /* couleur de fond de la progress bar */
+  margin: 50px;
+}
+.progress-masque {
+  position: absolute;
+  width: 1em;                     /* 100% de la largeur */
+  height: 1em;                    /* 100% de la hauteur */
+  left: -.15em;                   /* décalage de la largeur bordure de la gauge */
+  top: -.15em;                    /* décalage de la largeur bordure de la gauge */
+  clip: rect(0, 1em, 1em, .5em);  /* par défaut seule la partie droite est visible */
+}
+.progress-circle[data-value^='5']:not([data-value='5']):not([data-value^='5.']) .progress-masque,
+.progress-circle[data-value^='6']:not([data-value='6']):not([data-value^='6.']) .progress-masque,
+.progress-circle[data-value^='7']:not([data-value='7']):not([data-value^='7.']) .progress-masque,
+.progress-circle[data-value^='8']:not([data-value='8']):not([data-value^='8.']) .progress-masque,
+.progress-circle[data-value^='9']:not([data-value='9']):not([data-value^='9.']) .progress-masque,
+.progress-circle[data-value^='100'] .progress-masque {
+  clip: rect(auto, auto, auto, auto);
+}
+.progress-barre,
+.progress-sup50 {
+  position: absolute;
+  box-sizing: border-box;         /* prise en compte bordure dans la dimension */
+  border-width: .15em;            /* largeur bordure de la gauge */
+  border-style: solid;
+  border-color: #069;
+  border-radius: 50%;             /* rendu aspect circulaire */
+  width: 1em;                     /* largeur à 100% */
+  height: 1em;                    /* hauteur à 100% */
+  clip: rect(0, .5em, 1em, 0);    /* on ne garde que la partie gauche */
+}
+
+.progress-circle[data-value="0"]     .progress-barre {transform: rotate(0.00deg)}
+.progress-circle[data-value="1"]     .progress-barre {transform: rotate(3.60deg)}
+.progress-circle[data-value="2"]     .progress-barre {transform: rotate(7.20deg)}
+.progress-circle[data-value="3"]     .progress-barre {transform: rotate(10.80deg)}
+.progress-circle[data-value="4"]     .progress-barre {transform: rotate(14.40deg)}
+.progress-circle[data-value="5"]     .progress-barre {transform: rotate(18.00deg)}
+.progress-circle[data-value="6"]     .progress-barre {transform: rotate(21.60deg)}
+.progress-circle[data-value="7"]     .progress-barre {transform: rotate(25.20deg)}
+.progress-circle[data-value="8"]     .progress-barre {transform: rotate(28.80deg)}
+.progress-circle[data-value="9"]     .progress-barre {transform: rotate(32.40deg)}
+.progress-circle[data-value="10"]    .progress-barre {transform: rotate(36.00deg)}
+.progress-circle[data-value="11"]    .progress-barre {transform: rotate(39.60deg)}
+.progress-circle[data-value="12"]    .progress-barre {transform: rotate(43.20deg)}
+.progress-circle[data-value="13"]    .progress-barre {transform: rotate(46.80deg)}
+.progress-circle[data-value="14"]    .progress-barre {transform: rotate(50.40deg)}
+.progress-circle[data-value="15"]    .progress-barre {transform: rotate(54.00deg)}
+.progress-circle[data-value="16"]    .progress-barre {transform: rotate(57.60deg)}
+.progress-circle[data-value="17"]    .progress-barre {transform: rotate(61.20deg)}
+.progress-circle[data-value="18"]    .progress-barre {transform: rotate(64.80deg)}
+.progress-circle[data-value="19"]    .progress-barre {transform: rotate(68.40deg)}
+.progress-circle[data-value="20"]    .progress-barre {transform: rotate(72.00deg)}
+.progress-circle[data-value="21"]    .progress-barre {transform: rotate(75.60deg)}
+.progress-circle[data-value="22"]    .progress-barre {transform: rotate(79.20deg)}
+.progress-circle[data-value="23"]    .progress-barre {transform: rotate(82.80deg)}
+.progress-circle[data-value="24"]    .progress-barre {transform: rotate(86.40deg)}
+.progress-circle[data-value="25"]    .progress-barre {transform: rotate(90.00deg)}
+.progress-circle[data-value="26"]    .progress-barre {transform: rotate(93.60deg)}
+.progress-circle[data-value="27"]    .progress-barre {transform: rotate(97.20deg)}
+.progress-circle[data-value="28"]    .progress-barre {transform: rotate(100.80deg)}
+.progress-circle[data-value="29"]    .progress-barre {transform: rotate(104.40deg)}
+.progress-circle[data-value="30"]    .progress-barre {transform: rotate(108.00deg)}
+.progress-circle[data-value="31"]    .progress-barre {transform: rotate(111.60deg)}
+.progress-circle[data-value="32"]    .progress-barre {transform: rotate(115.20deg)}
+.progress-circle[data-value="33"]    .progress-barre {transform: rotate(118.80deg)}
+.progress-circle[data-value="34"]    .progress-barre {transform: rotate(122.40deg)}
+.progress-circle[data-value="35"]    .progress-barre {transform: rotate(126.00deg)}
+.progress-circle[data-value="36"]    .progress-barre {transform: rotate(129.60deg)}
+.progress-circle[data-value="37"]    .progress-barre {transform: rotate(133.20deg)}
+.progress-circle[data-value="38"]    .progress-barre {transform: rotate(136.80deg)}
+.progress-circle[data-value="39"]    .progress-barre {transform: rotate(140.40deg)}
+.progress-circle[data-value="40"]    .progress-barre {transform: rotate(144.00deg)}
+.progress-circle[data-value="41"]    .progress-barre {transform: rotate(147.60deg)}
+.progress-circle[data-value="42"]    .progress-barre {transform: rotate(151.20deg)}
+.progress-circle[data-value="43"]    .progress-barre {transform: rotate(154.80deg)}
+.progress-circle[data-value="44"]    .progress-barre {transform: rotate(158.40deg)}
+.progress-circle[data-value="45"]    .progress-barre {transform: rotate(162.00deg)}
+.progress-circle[data-value="46"]    .progress-barre {transform: rotate(165.60deg)}
+.progress-circle[data-value="47"]    .progress-barre {transform: rotate(169.20deg)}
+.progress-circle[data-value="48"]    .progress-barre {transform: rotate(172.80deg)}
+.progress-circle[data-value="49"]    .progress-barre {transform: rotate(176.40deg)}
+.progress-circle[data-value="50"]    .progress-barre {transform: rotate(180.00deg)}
+.progress-circle[data-value="51"]    .progress-barre {transform: rotate(183.60deg)}
+.progress-circle[data-value="52"]    .progress-barre {transform: rotate(187.20deg)}
+.progress-circle[data-value="53"]    .progress-barre {transform: rotate(190.80deg)}
+.progress-circle[data-value="54"]    .progress-barre {transform: rotate(194.40deg)}
+.progress-circle[data-value="55"]    .progress-barre {transform: rotate(198.00deg)}
+.progress-circle[data-value="56"]    .progress-barre {transform: rotate(201.60deg)}
+.progress-circle[data-value="57"]    .progress-barre {transform: rotate(205.20deg)}
+.progress-circle[data-value="58"]    .progress-barre {transform: rotate(208.80deg)}
+.progress-circle[data-value="59"]    .progress-barre {transform: rotate(212.40deg)}
+.progress-circle[data-value="60"]    .progress-barre {transform: rotate(216.00deg)}
+.progress-circle[data-value="61"]    .progress-barre {transform: rotate(219.60deg)}
+.progress-circle[data-value="62"]    .progress-barre {transform: rotate(223.20deg)}
+.progress-circle[data-value="63"]    .progress-barre {transform: rotate(226.80deg)}
+.progress-circle[data-value="64"]    .progress-barre {transform: rotate(230.40deg)}
+.progress-circle[data-value="65"]    .progress-barre {transform: rotate(234.00deg)}
+.progress-circle[data-value="66"]    .progress-barre {transform: rotate(237.60deg)}
+.progress-circle[data-value="67"]    .progress-barre {transform: rotate(241.20deg)}
+.progress-circle[data-value="68"]    .progress-barre {transform: rotate(244.80deg)}
+.progress-circle[data-value="69"]    .progress-barre {transform: rotate(248.40deg)}
+.progress-circle[data-value="70"]    .progress-barre {transform: rotate(252.00deg)}
+.progress-circle[data-value="71"]    .progress-barre {transform: rotate(255.60deg)}
+.progress-circle[data-value="72"]    .progress-barre {transform: rotate(259.20deg)}
+.progress-circle[data-value="73"]    .progress-barre {transform: rotate(262.80deg)}
+.progress-circle[data-value="74"]    .progress-barre {transform: rotate(266.40deg)}
+.progress-circle[data-value="75"]    .progress-barre {transform: rotate(270.00deg)}
+.progress-circle[data-value="76"]    .progress-barre {transform: rotate(273.60deg)}
+.progress-circle[data-value="77"]    .progress-barre {transform: rotate(277.20deg)}
+.progress-circle[data-value="78"]    .progress-barre {transform: rotate(280.80deg)}
+.progress-circle[data-value="79"]    .progress-barre {transform: rotate(284.40deg)}
+.progress-circle[data-value="80"]    .progress-barre {transform: rotate(288.00deg)}
+.progress-circle[data-value="81"]    .progress-barre {transform: rotate(291.60deg)}
+.progress-circle[data-value="82"]    .progress-barre {transform: rotate(295.20deg)}
+.progress-circle[data-value="83"]    .progress-barre {transform: rotate(298.80deg)}
+.progress-circle[data-value="84"]    .progress-barre {transform: rotate(302.40deg)}
+.progress-circle[data-value="85"]    .progress-barre {transform: rotate(306.00deg)}
+.progress-circle[data-value="86"]    .progress-barre {transform: rotate(309.60deg)}
+.progress-circle[data-value="87"]    .progress-barre {transform: rotate(313.20deg)}
+.progress-circle[data-value="88"]    .progress-barre {transform: rotate(316.80deg)}
+.progress-circle[data-value="89"]    .progress-barre {transform: rotate(320.40deg)}
+.progress-circle[data-value="90"]    .progress-barre {transform: rotate(324.00deg)}
+.progress-circle[data-value="91"]    .progress-barre {transform: rotate(327.60deg)}
+.progress-circle[data-value="92"]    .progress-barre {transform: rotate(331.20deg)}
+.progress-circle[data-value="93"]    .progress-barre {transform: rotate(334.80deg)}
+.progress-circle[data-value="94"]    .progress-barre {transform: rotate(338.40deg)}
+.progress-circle[data-value="95"]    .progress-barre {transform: rotate(342.00deg)}
+.progress-circle[data-value="96"]    .progress-barre {transform: rotate(345.60deg)}
+.progress-circle[data-value="97"]    .progress-barre {transform: rotate(349.20deg)}
+.progress-circle[data-value="98"]    .progress-barre {transform: rotate(352.80deg)}
+.progress-circle[data-value="99"]    .progress-barre {transform: rotate(356.40deg)}
+.progress-circle[data-value="100"]   .progress-barre {transform: rotate(360.00deg)}
+
+.progress-sup50 {
+  display: none;
+  clip: rect(0, 1em, 1em, .5em);
+}
+.progress-circle[data-value^='5']:not([data-value='5']):not([data-value^='5.']) .progress-sup50,
+.progress-circle[data-value^='6']:not([data-value='6']):not([data-value^='6.']) .progress-sup50,
+.progress-circle[data-value^='7']:not([data-value='7']):not([data-value^='7.']) .progress-sup50,
+.progress-circle[data-value^='8']:not([data-value='8']):not([data-value^='8.']) .progress-sup50,
+.progress-circle[data-value^='9']:not([data-value='9']):not([data-value^='9.']) .progress-sup50,
+.progress-circle[data-value^='100'] .progress-sup50 {
+  display:block;
+}
+.html{
+  background-image: url(http://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-html-5-icon.png);
+background-size: contain;
+float: left;
+}
+.css{
+  background-image: url(https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png);
+  background-size: contain;
+  float: left;
+}
+.bootstrap{
+  background-image: url(https://web-tool-box.com/ownprojects/img/interets/bootstrap.png);
+  background-size: contain;
+  float: left;
+}
+.javascript{
+  background-image: url(https://www.envict.com/web/image/566);
+  background-size: contain;
+  float: left;
+}
+.angular{
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png);
+  background-size: contain;
+  float: left;
+}
+.php{
+  background-image: url(https://www.logolynx.com/images/logolynx/22/2279ab2e10cf08bba3896ac65e4075fb.png);
+  background-size: contain;
+  float: left;
+}
+.sql{
+  background-image: url(https://img.icons8.com/ios/1600/mysql-logo-filled.png);
+  background-size: contain;
+  float: left;
+}
+.symfony{
+  background-image: url(https://img.icons8.com/color/1600/symfony.png);
+  background-size: cover;
+  float: left;
+}
+.ajax{
+  background-image: url(http://fortimelp.fr/493-large_default/formation-ajax-developpez-pour-le-web-20-3-jours.jpg);
+  background-size: contain;
+  float: left;
+}
+.atom{
+  background-image: url(https://cdn.worldvectorlogo.com/logos/atom-5.svg);
+  background-size: cover;
+  float: left;
+}
+.office{
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Microsoft_Office_2013_logo.svg/1200px-Microsoft_Office_2013_logo.svg.png);
+  background-size: cover;
+  float: left;
+}
+.netbeans{
+  background-image: url(https://cdn.worldvectorlogo.com/logos/netbeans-1.svg);
+  background-size: contain;
+  float: left;
+}
+.windows{
+  background-image: url(https://072-pc.nl/wp-content/uploads/2017/08/social-windows.png);
+  background-size: contain;
+  float: left;
+}
+.linux{
+  background-image: url(https://dutchwebs.com/uploads/images/878980_linux_512x512.png);
+  background-size: contain;
+  float: left;
+
+}
