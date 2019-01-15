@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <meta charset="utf-8">
-    <title></title>
+    <title>CV Simon Lecul</title>
   </head>
   <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2 col-xl-2">
+
+
     <!-- Début Scroll (bouton de retour en tête de page) -->
                   <div  class="scroll-top-wrapper show">
                     <a href="#scrolltop">
@@ -16,101 +22,109 @@
                 <!-- Fin du scroll -->
     <video id="video" autoplay="" muted="" loop="" >
       <source src="manta.mp4" type="video/mp4">
-        Désolé, votre navigateur ne parvient pas à afficher la vidéo de fond
+        Sorry, your browser can't display the background video.
     </video>
 <!--sidenav-->
 <div id="scrolltop"></div>
-    <ul id="slide-out" class="sidenav" style="transform: translateX(0px);">
+    <ul id="sidenav" class="sidenav" style="transform: translateX(0px);">
       <li>
         <div class="user-view">
           <div class="background"></div>
-          <a href="english.html" title="Version anglaise">
-            <img class="flag" src="anglais.jpg" alt="icone du drapeau anglais" title="image du drapeau anglais" />
+          <a href="anglais.html" title="French version">
+            <img class="flag" src="anglais.jpg" alt="picture of french flag" title="picture of french flag" />
           </a>
           <br />
-          <img class="userjpg" src="moi.jpg" alt="photo de moi" title="photo de moi" />
+          <img class="userjpg" src="moi.jpg" alt="picture of me" title="picture of me" />
           <h1 class="firstName">Simon</h1>
           <p class="lastName">Lecul</p>
-          <p class="formation">Développeur web Junior</p>
+          <p class="formation">web developer</p>
+          <p class="formation">Junior</p>
           <p class="formation">Full-stack</p>
           <p class="adress">60350 Bitry</p>
-          <p class="adress">(Environ 1h de Paris)</p>
+          <p class="adress">(about 1h of Paris)</p>
           <p class="phone">06.71.03.66.32</p>
           <p class="email">slecul@laposte.net</p>
-          <a href="https://github.com/slecul" title="Lien vers mon profil github">
+          <a href="https://github.com/slecul" title="Link to my github profile">
             <img class="miniature" src="github2.png" alt="icône github" />
           </a>
-          <a href="https://www.linkedin.com/in/cedric-cousin-359307124/" title="Liens vers mon profil linkedin">
+          <a href="https://www.linkedin.com/in/cedric-cousin-359307124/" title="Link to my Linkedin profile">
             <img class="miniature" src="linkedin.svg" alt="icône linkedin" />
           </a>
         </div>
       </li>
       <!-- menu sidenav -->
       <li>
-        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#about" title="Présentation">Présentation</a>
+        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#about" title="About me">About me</a>
       </li>
       <li>
-        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#experience" title="Expérience et formations">Expérience et Formations</a>
+        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#experience" title="Experience and educational background">Experience and educational background</a>
       </li>
       <li>
-        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#skills" title="Compétence">Compétences</a>
+        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#skills" title="skills">skills</a>
       </li>
       <li>
-        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#interests" title="Centre d'intérêt">Centres d'intérêt</a>
+        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#interests" title="interests">interests</a>
       </li>
     </ul>
+  </div>
 <!-- fin du menu -->
-<div>
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 offset-md-5 offset-lg-7">
     <div id="about">
       <p> Bien le bonjour! Je suis actuellement la formation "Développeur web" chez E2N, à Noyon dans l'Oise. Autonome, responsable, curieux et autodidacte sont des qualités que j'aimerais mettre au service du numérique. C'est un secteur passionnant, en constante évolution et où il reste toujours à apprendre.</p>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 offset-md-2 offset-lg-2">
     <div id="experience">
       <h2>Expérience et Formations</h2>
       <!--Début de la timeline -->
       <div class="timeline">
-        <div class="container left">
+        <div class="container2 left">
           <div class="content">
             <h3>Septembre/novembre 2018</h3>
             <p>Travail en intérim, Conditionnement chez Khuene-Nagel.</p>
           </div>
         </div>
-        <div class="container left">
+        <div class="container2 left">
           <div class="content">
             <h3>Juin 2018</h3>
             <p>Stage ouvrier dans une station d'épuration d'une usine de chimie.</p>
           </div>
         </div>
-        <div class="container right">
+        <div class="container2 right">
           <div class="content">
             <h3>2017</h3>
               <p>Diplôme national du Baccalauréat série Scientifique, mention assez bien, Lycée Mireille Grenet, Compiègne.</p>
           </div>
         </div>
-        <div class="container left">
+        <div class="container2 left">
           <div class="content">
             <h3>Juin/Juillet 2017</h3>
             <p>travail saisonnier en milieu agricole.</p>
           </div>
         </div>
-        <div class="container right">
+        <div class="container2 right">
           <div class="content">
             <h3>2015</h3>
             <p>Journée de la Défense et de la Citoyenneté.</p>
           </div>
         </div>
-        <div class="container right">
+        <div class="container2 right">
           <div class="content">
             <h3>2013</h3>
             <p>Prévention et secours civique de niveau 1 (PSC1).</p>
           </div>
         </div>
-        <div class="container left">
+        <div class="container2 left">
           <div class="content">
             <h3>2013</h3>
             <p>Stage de Troisième en milieu agricole avec production de Comté AOP/AOC.</p>
           </div>
         </div>
-        <div class="container right">
+        <div class="container2 right">
           <div class="content">
             <h3>2013</h3>
             <p>Diplôme National du Brevet des collèges, mention Bien, Collège Louis Bouland, Couloisy.</p>
@@ -118,6 +132,10 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-lg-10 offset-md-1 offset-lg-1">
     <div id="skills">
       <h2>Compétences</h2>
       <div class="progress-circle html" data-value="40">
@@ -220,10 +238,11 @@
         <p class="progress">Linux</p>
       </div>
 
-
-
+</div>
+</div>
+</div>
     </div>
-
+    </div>
   </div>
   </body>
 </html>

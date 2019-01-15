@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
-    <link rel="stylesheet" href="bootstrap.css"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
     <meta charset="utf-8">
     <title>CV Simon Lecul</title>
   </head>
@@ -16,12 +16,12 @@
                   <div  class="scroll-top-wrapper show">
                     <a href="#scrolltop">
                   <span class="scroll-top-inner">
-                    <img class="icoScroll" src="fleche2.png">
+                    <img class="icoScroll" src="assets/img/fleche2.png">
                   </span>
                 </div>
                 <!-- Fin du scroll -->
     <video id="video" autoplay="" muted="" loop="" >
-      <source src="manta.mp4" type="video/mp4">
+      <source src="assets/video/manta.mp4" type="video/mp4">
         Désolé, votre navigateur ne parvient pas à afficher la vidéo de fond
     </video>
 <!--sidenav-->
@@ -30,11 +30,11 @@
       <li>
         <div class="user-view">
           <div class="background"></div>
-          <a href="english.html" title="Version anglaise">
-            <img class="flag" src="anglais.jpg" alt="icone du drapeau anglais" title="image du drapeau anglais" />
+          <a href="anglais.html" title="Version anglaise">
+            <img class="flag" src="assets/img/anglais.jpg" alt="icone du drapeau anglais" title="image du drapeau anglais" />
           </a>
           <br />
-          <img class="userjpg" src="moi.jpg" alt="photo de moi" title="photo de moi" />
+          <img class="userjpg" src="assets/img/moi.jpg" alt="photo de moi" title="photo de moi" />
           <h1 class="firstName">Simon</h1>
           <p class="lastName">Lecul</p>
           <p class="formation">Développeur web</p>
@@ -45,10 +45,10 @@
           <p class="phone">06.71.03.66.32</p>
           <p class="email">slecul@laposte.net</p>
           <a href="https://github.com/slecul" title="Lien vers mon profil github">
-            <img class="miniature" src="github2.png" alt="icône github" />
+            <img class="miniature" src="assets/img/github2.png" alt="icône github" />
           </a>
           <a href="https://www.linkedin.com/in/cedric-cousin-359307124/" title="Liens vers mon profil linkedin">
-            <img class="miniature" src="linkedin.svg" alt="icône linkedin" />
+            <img class="miniature" src="assets/img/linkedin.svg" alt="icône linkedin" />
           </a>
         </div>
       </li>
@@ -60,7 +60,7 @@
         <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#experience" title="Expérience et formations">Expérience et Formations</a>
       </li>
       <li>
-        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#skills" title="Compétence">Compétences</a>
+        <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#skills" title="Compétences">Compétences</a>
       </li>
       <li>
         <a class="js-scrollTo_center-align_waves-effect_waves-blue" href="#interests" title="Centre d'intérêt">Centres d'intérêt</a>
@@ -237,12 +237,58 @@
         </div>
         <p class="progress">Linux</p>
       </div>
+</div>
+</div>
+</div>
 
+<div class="row">
+  <div class="col-sm-10 col-md-8 col-lg-8 offset-sm-1 offset-md-2 offset-lg-2">
+    <div id="interests">
+    <h2>Centres d'interêts</h2>
+<div id="carouselExampleIndicators" class="carousel slide h-50" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/img/plongee.jpg" class="d-block w-100" alt="image de guitare">
+      <div class="carousel-caption d-none d-md-block">
+  <h4>Plongée sous marine</h4>
+</div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/guitare.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+  <h4>musique</h4>
+</div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/belgariade.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+  <h4>Lecture</h4>
+</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 </div>
 </div>
+</div>
+
     </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   </body>
 </html>
